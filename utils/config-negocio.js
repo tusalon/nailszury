@@ -1,12 +1,12 @@
 // utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: YANEYSI LAGO salon_eres_bella_
+// CLIENTE: Nails.zury
 
 console.log('🏢 config-negocio.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = 'a82021db-d6ef-4ede-a20c-1dc8a73b26c2'; // ID de YANEYSI LAGO salon_eres_bella_
+const NEGOCIO_ID_POR_DEFECTO = 'e1752496-629b-4182-bef3-4296d29c33a9'; // ID de Nails.zury
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -116,7 +116,7 @@ window.cargarConfiguracionNegocio = async function(forceRefresh = false) {
  */
 window.getNombreNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.nombre || 'YANEYSI LAGO salon_eres_bella_';
+    return config?.nombre || 'Nails.zury';
 };
 
 /**
@@ -124,7 +124,7 @@ window.getNombreNegocio = async function() {
  */
 window.getTelefonoDuenno = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.telefono || '55164035';
+    return config?.telefono || '54642148';
 };
 
 /**
@@ -132,7 +132,7 @@ window.getTelefonoDuenno = async function() {
  */
 window.getEmailNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.email || 'yaneysilagocabrera@gmail.com';
+    return config?.email || 'zurinaymartinez3@ gmail.com';
 };
 
 /**
@@ -164,7 +164,7 @@ window.getHorarioAtencion = async function() {
  */
 window.getMensajeBienvenida = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.mensaje_bienvenida || '¡Bienvenida a YANEYSI LAGO salon_eres_bella_!';
+    return config?.mensaje_bienvenida || '¡Bienvenida a Nails.zury!';
 };
 
 /**
@@ -180,7 +180,7 @@ window.getMensajeConfirmacion = async function() {
  */
 window.getNtfyTopic = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.ntfy_topic || 'yaneysi-lago-saloneresbella';
+    return config?.ntfy_topic || 'nailszury';
 };
 
 /**
@@ -205,5 +205,5 @@ setTimeout(async () => {
     await window.cargarConfiguracionNegocio();
 }, 500);
 
-console.log('✅ config-negocio.js listo para YANEYSI LAGO salon_eres_bella_');
+console.log('✅ config-negocio.js listo para Nails.zury');
 console.log('🏷️  ID configurado:', NEGOCIO_ID_POR_DEFECTO);

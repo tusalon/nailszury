@@ -1,22 +1,22 @@
-// sw.js - Service Worker para YANEYSI LAGO salon_eres_bella_
+// sw.js - Service Worker para Nails.zury
 
-const CACHE_NAME = 'yaneysi-lago-saloneresbella-v1';
+const CACHE_NAME = 'nailszury-v1';
 const urlsToCache = [
-  '/yaneysi-lago-saloneresbella/',
-  '/yaneysi-lago-saloneresbella/index.html',
-  '/yaneysi-lago-saloneresbella/admin.html',
-  '/yaneysi-lago-saloneresbella/admin-login.html',
-  '/yaneysi-lago-saloneresbella/setup-wizard.html',
-  '/yaneysi-lago-saloneresbella/editar-negocio.html',
-  '/yaneysi-lago-saloneresbella/manifest.json',
-  '/yaneysi-lago-saloneresbella/icons/icon-72x72.png',
-  '/yaneysi-lago-saloneresbella/icons/icon-96x96.png',
-  '/yaneysi-lago-saloneresbella/icons/icon-128x128.png',
-  '/yaneysi-lago-saloneresbella/icons/icon-144x144.png',
-  '/yaneysi-lago-saloneresbella/icons/icon-152x152.png',
-  '/yaneysi-lago-saloneresbella/icons/icon-192x192.png',
-  '/yaneysi-lago-saloneresbella/icons/icon-384x384.png',
-  '/yaneysi-lago-saloneresbella/icons/icon-512x512.png'
+  '/nailszury/',
+  '/nailszury/index.html',
+  '/nailszury/admin.html',
+  '/nailszury/admin-login.html',
+  '/nailszury/setup-wizard.html',
+  '/nailszury/editar-negocio.html',
+  '/nailszury/manifest.json',
+  '/nailszury/icons/icon-72x72.png',
+  '/nailszury/icons/icon-96x96.png',
+  '/nailszury/icons/icon-128x128.png',
+  '/nailszury/icons/icon-144x144.png',
+  '/nailszury/icons/icon-152x152.png',
+  '/nailszury/icons/icon-192x192.png',
+  '/nailszury/icons/icon-384x384.png',
+  '/nailszury/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/yaneysi-lago-saloneresbella/icons/icon-192x192.png');
+            return caches.match('/nailszury/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para YANEYSI LAGO salon_eres_bella_');
+console.log('✅ Service Worker configurado para Nails.zury');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);
